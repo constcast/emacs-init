@@ -8,9 +8,6 @@
 (require 'aggressive-indent)
 (global-aggressive-indent-mode 1)
 
-(require 'color-theme)
-(color-theme-initialize)
-
 (require 'fill-column-indicator)
 (setq fci-rule-width 80)
 (setq fci-rule-color "red")

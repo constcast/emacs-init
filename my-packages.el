@@ -1,4 +1,4 @@
-; ~/.emacs.d/my-packages.el
+					; ~/.emacs.d/my-packages.el
 (require 'cl)
 
 (require 'package)
@@ -12,7 +12,6 @@
   '(
     magit
     aggressive-indent
-    color-theme
     fill-column-indicator
     ) "a list of packages to ensure are installed at launch.")
 
