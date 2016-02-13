@@ -13,16 +13,22 @@
 (when (fboundp 'scroll-bar-mode) (scroll-bar-mode -1))
 
 ;; color theme settings, either by package or manual selection
-(setq color-theme-selection "theme")
-(if (equal color-theme-selection "theme")
-    (color-theme-deep-blue)
-  ;; set background and foreground colors
-  (set-background-color "black")
-  (set-foreground-color "white")
-  ;; set background color for marked regions
-  (set-face-background 'region "blue")
-  (set-face-background 'highlight "blue")
-  )
+(setq color-theme-selection "blue 0")
+(cond ((equal color-theme-selection "blue")
+       (load-theme 'deeper-blue)
+       )
+      ((equal color-theme-selection "zenburn")
+       (load-theme 'zenburn)
+       )
+      (t
+       ;; set background and foreground colors
+       (set-background-color "black")
+       (set-foreground-color "white")
+       ;; set background color for marked regions
+       (set-face-background 'region "blue")
+       (set-face-background 'highlight "blue")
+       )
+      )
 
 
 ;; enable the narrow command (if not set, there will be an annoying message
