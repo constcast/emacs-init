@@ -1,4 +1,12 @@
-(setq ispell-program-name "aspell")
+;;
+(cond
+ (
+  (file-exists-p "/usr/local/bin/aspell")
+  (setq ispell-program-name "/usr/local/bin/aspell")
+  )
+ (t
+  (setq ispell-program-name "aspell")
+  ))
 
 ;; alist leeren und für aspell /de_DE.UTF-8 richtig eingestellen:
 (setq ispell-local-dictionary-alist nil)
