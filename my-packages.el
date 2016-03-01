@@ -13,7 +13,9 @@
     magit
     aggressive-indent
     fill-column-indicator
+    elpy
     zenburn-theme
+    dracula-theme
     ) "a list of packages to ensure are installed at launch.")
 
 					; method to check if all packages are installed
