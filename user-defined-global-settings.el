@@ -13,12 +13,16 @@
 (when (fboundp 'scroll-bar-mode) (scroll-bar-mode -1))
 
 ;; color theme settings, either by package or manual selection
-(setq color-theme-selection "zenburn")
+(setq color-theme-selection "dracula")
 (cond ((equal color-theme-selection "blue")
        (load-theme 'deeper-blue)
        )
       ((equal color-theme-selection "zenburn")
        (load-theme 'zenburn t)
+       )
+      ((equal color-theme-selection "dracula")
+       (require 'dracula-theme)
+       (load-theme 'dracula t)
        )
       (t
        ;; set background and foreground colors
